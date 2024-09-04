@@ -118,6 +118,19 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .project {
+                page-break-before: always;
+            }
+            .project:first-of-type {
+                page-break-before: avoid;
+            }
+        }
     </style>
 </head>
 <body>
