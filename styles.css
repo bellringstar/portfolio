@@ -6,59 +6,6 @@
   --skill-background: #3498db;
 }
 
-.project-description, .project-responsibilities, .project-tech {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.project-info h4 {
-  color: var(--secondary-color);
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.project-info ul {
-  padding-left: 20px;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
-
-.skill {
-  background-color: var(--skill-background);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  display: inline-block;
-  margin: 0.2rem;
-}
-
-.skill {
-  background-color: var(--skill-background);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  display: inline-block;
-  margin: 0.2rem;
-}
-
-.project-images {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.project-images img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-}
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -109,8 +56,6 @@ section {
   gap: 10px;
 }
 
-
-
 .project {
   background-color: white;
   border: 1px solid #ddd;
@@ -132,6 +77,49 @@ section {
 
 .project p {
   margin: 0.5rem 0;
+}
+
+.project-description, .project-responsibilities, .project-tech {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-info h4 {
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-info ul {
+  padding-left: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.skill {
+  background-color: var(--skill-background);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 ul {
@@ -158,5 +146,26 @@ a:hover {
   
   h1 {
     font-size: 2rem;
+  }
+}
+
+/* 프로젝트별 페이지 나누기 및 인쇄 설정 */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .project {
+    page-break-before: always;
+  }
+  
+  .project:first-of-type {
+    page-break-before: avoid;
+  }
+  
+  .project-images img {
+    max-height: 300px;
+    width: auto;
   }
 }
