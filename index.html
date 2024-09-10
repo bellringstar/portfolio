@@ -262,7 +262,6 @@
 
                     <div class="project-images">
                         <img src="./images/team2dari-ARC.png" alt="축제의 민족 프로젝트 아키텍처">
-                        <img src="./images/team2dari2.gif" alt="축제의 민족 프로젝트 이미지 2">
                         <img src="./images/team2dari3.gif" alt="축제의 민족 프로젝트 이미지 3">
                         <img src="./images/team2dari4.gif" alt="축제의 민족 프로젝트 이미지 4">
                     </div>
@@ -286,11 +285,30 @@
                         <div class="project-responsibilities">
                             <h4>담당 업무</h4>
                             <ul>
-                                <li>채팅방 서버 구현</li>
-                                <li>IoT기기와 통신을 위한 서비스 구현</li>
-                                <li>Stomp over WebSocket을 이용한 실시간 채팅 시스템 개발</li>
-                                <li>Kafka를 활용한 메시징 시스템 구축</li>
-                                <li>MongoDB를 이용한 채팅 내역 관리 시스템 개발</li>
+                                <li>채팅방 서버 구현
+                                    <ul>
+                                        <li>Spring WebSocket을 사용하여 실시간 양방향 통신 구현</li>
+                                        <li>채팅방 생성, 참여, 나가기 등의 기능을 RESTful API로 설계 및 구현</li>
+                                    </ul>
+                                </li>
+                                <li>Stomp over WebSocket을 이용한 실시간 채팅 시스템 개발
+                                    <ul>
+                                        <li>STOMP 프로토콜을 사용하여 효율적인 메시지 라우팅 구현</li>
+                                        <li>사용자 인증 및 권한 관리를 위한 인터셉터 구현</li>
+                                    </ul>
+                                </li>
+                                <li>Kafka를 활용한 메시징 시스템 구축
+                                    <ul>
+                                        <li>비동기 처리를 통한 시스템 성능 향상 및 확장성 확보</li>
+                                        <li>주문 처리, 알림 발송 등의 이벤트를 Kafka 토픽으로 관리</li>
+                                    </ul>
+                                </li>
+                                <li>MongoDB를 이용한 채팅 내역 관리 시스템 개발
+                                    <ul>
+                                        <li>비정형 데이터인 채팅 메시지를 효율적으로 저장 및 조회</li>
+                                        <li>인덱싱을 통한 빠른 검색 기능 구현</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <div class="project-tech">
@@ -329,11 +347,34 @@
                         <div class="project-responsibilities">
                             <h4>담당 업무</h4>
                             <ul>
-                                <li>Spring Webflux를 이용한 비동기 업로드 서버 구현</li>
-                                <li>매칭 서버 및 화면 구현</li>
-                                <li>GPS 트랙킹 서버 및 화면 구현</li>
-                                <li>MongoDB를 활용한 GPS 데이터 저장 및 처리</li>
-                                <li>하버사인 공식을 이용한 근처 사용자 매칭 알고리즘 구현</li>
+                                <li>Spring Webflux를 이용한 비동기 업로드 서버 구현
+                                    <ul>
+                                        <li>비동기 Non-blocking I/O를 활용하여 파일 업로드 처리</li>
+                                    </ul>
+                                </li>
+                                <li>매칭 서버 및 화면 구현
+                                    <ul>
+                                        <li>사용자 선호도 기반 매칭 알고리즘 설계 및 구현</li>
+                                    </ul>
+                                </li>
+                                <li>GPS 트랙킹 서버 및 화면 구현
+                                    <ul>
+                                        <li>클라이언트로부터 실시간 GPS 데이터 수신 및 처리</li>
+                                        <li>Google Maps API를 활용한 실시간 위치 시각화 구현</li>
+                                    </ul>
+                                </li>
+                                <li>MongoDB를 활용한 GPS 데이터 저장 및 처리
+                                    <ul>
+                                        <li>시계열 데이터 특성을 고려한 효율적인 데이터 모델링</li>
+                                        <li>지리공간 인덱싱을 통한 위치 기반 쿼리 최적화</li>
+                                    </ul>
+                                </li>
+                                <li>하버사인 공식을 이용한 근처 사용자 매칭 알고리즘 구현
+                                    <ul>
+                                        <li>효율적인 지리적 거리 계산을 위해 하버사인 공식 적용</li>
+                                        <li>인덱싱을 통한 빠른 검색 및 매칭 성능 최적화</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <div class="project-tech">
