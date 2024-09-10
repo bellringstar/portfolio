@@ -205,6 +205,69 @@
 
         <section id="projects">
             <h2>프로젝트</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>축제의 민족 - 페스티벌 티켓 예매 서비스</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/woowa-techcamp-2024/Team2-Dari" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <p>기간: 2024-08 ~ 2024-08 (3주)</p>
+                <div class="project-details">
+                    <div class="project-info">
+                        <div class="project-description">
+                            <h4>프로젝트 설명</h4>
+                            <p>제한된 리소스 환경(AWS t3.small EC2 인스턴스 2대, RDS, Redis)에서 안정적인 운영을 목표로 하는 페스티벌 티켓 예매 서비스입니다. 순간적인 대규모 트래픽 상황에서도 안정적으로 동작하도록 설계되었으며, 효율적인 대기열 관리와 비동기 처리를 통해 사용자 경험을 최적화했습니다.</p>
+                        </div>
+                        <div class="project-responsibilities">
+                            <h4>담당 업무</h4>
+                            <ul>
+                                <li>결제 비동기 처리 시스템 구현
+                                    <ul>
+                                        <li>CompletableFuture와 커스텀 스레드 풀을 활용한 비동기 결제 처리 구조 설계</li>
+                                        <li>Caffeine 캐시를 도입하여 결제 상태 관리 최적화</li>
+                                        <li>결제 성공 및 실패에 따른 후속 처리 작업 자동화</li>
+                                    </ul>
+                                </li>
+                                <li>MySQL 배치 처리 최적화
+                                    <ul>
+                                        <li>ConcurrentLinkedQueue를 사용한 인메모리 큐 시스템 구축</li>
+                                        <li>JdbcTemplate을 활용한 배치 INSERT 쿼리 최적화</li>
+                                        <li>대량의 주문 데이터 효율적 처리 구현</li>
+                                    </ul>
+                                </li>
+                                <li>장애 대응 메커니즘 구현
+                                    <ul>
+                                        <li>결제 실패 및 시스템 장애 시 데이터 정합성 보장을 위한 보상 트랜잭션 처리 로직 개발</li>
+                                    </ul>
+                                </li>
+                                <li>프론트엔드 화면 구성
+                                    <ul>
+                                        <li>React를 활용한 사용자 인터페이스 개발</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <h4>사용 기술</h4>
+                            <ul>
+                                <li>Java 17, Spring Boot 3.3.2, MySQL 8.0.35, Redis</li>
+                                <li>React, K6, Prometheus, Grafana</li>
+                                <li>AWS Application LoadBalancer, AWS EC2, AWS RDS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-images">
+                        <img src="./images/team2dari-ARC.png" alt="축제의 민족 프로젝트 아키텍처">
+                        <img src="./images/team2dari2.gif" alt="축제의 민족 프로젝트 이미지 2">
+                        <img src="./images/team2dari3.gif" alt="축제의 민족 프로젝트 이미지 3">
+                        <img src="./images/team2dari4.gif" alt="축제의 민족 프로젝트 이미지 4">
+                    </div>
+                </div>
+            </div>
             
             <div class="project">
                 <div class="project-header">
