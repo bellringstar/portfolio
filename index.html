@@ -6,341 +6,334 @@
     <title>김현종 - Backend Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        header {
-            background-color: #f4f4f4;
-            color: var(--secondary-color);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .header-text {
-            flex-grow: 1;
-        }
-
-        .header-text h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--primary-color);
-        }
-
-        .header-text p {
-            margin: 0.5rem 0 0;
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-        }
-
-        .intro  {
-            font-size: 12px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .project-links a {
-            margin-left: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .project-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .project-description, .project-responsibilities, .project-tech {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .skill-category {
-            margin-bottom: 1rem;
-        }
-
-        .skill-category h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
-        }
-
-        .contact-info a {
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-info i {
-            margin-right: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .project-details {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media print {
-            body {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            .project {
-                page-break-before: always;
-            }
-            .project:first-of-type {
-                page-break-before: avoid;
-            }
-        }
-    </style>
 </head>
+
 <body>
     <div class="container">
-      <header>
-        <div class="header-content">
+        <!-- 헤더 섹션 -->
+        <header class="header-content">
             <div class="header-text">
                 <h1>김현종</h1>
-                <p>Backend Developer</p>
+                <h2>Backend Developer</h2>
             </div>
-        </div>
-    </header>
-    <div class="intro">
-        <section id="about" class="about">
+        </header>
+
+        <!-- About Me 섹션 -->
+        <section id="about" class="section about">
             <h2>About Me</h2>
-            <p>안녕하세요, 변화의 중심에 있고 싶은 백엔드 개발자 김현종입니다. 저는 기술을 통해 사람들의 일상을 더 편리하게 만드는 것을 목표로 합니다.</p>
-            
-            <p>객체지향 설계에 대해 깊은 관심을 가지고 있으며, 이를 바탕으로 효율적이고 확장 가능한 서버 시스템을 구축하는 데 주력하고 있습니다. 새로운 기술을 학습하고 적용하는 것을 즐기며, 특히 대규모 데이터 처리 및 동시성에 관심이 많습니다.</p>
-            
-            <p>팀과의 협업을 통해 더 나은 솔루션을 만들어내는 과정에서 큰 보람을 느낍니다. 효과적인 의사소통과 지식 공유를 통해 팀 전체의 성장에 기여하고자 노력합니다.</p>
-        
-            <p>저는 다음과 같은 가치를 중요시합니다.</p>
-            
-            <p><strong>첫째</strong>, "효과적인 의사소통"과 "균형 잡힌 팀워크"입니다. 우아한테크캠프에서 진행한 `축제의 민족` 프로젝트에서는 제한된 리소스 환경에서의 대규모 트래픽 처리라는 도전적인 과제를 맡았습니다. 이 과정에서 단순히 기술적 해결책을 제시하는 것을 넘어, 팀원들과 함께 시스템의 한계점을 분석하고 개선 방향을 도출했습니다. 특히 결제 시스템 설계 시에는 팀원들과의 적극적인 토론을 통해 비동기 처리 방식을 채택했고, 이는 시스템 성능 향상으로 이어졌습니다.</p>
-            
-            <p><strong>둘째</strong>, "지속적인 학습과 기술적 도전"입니다. 현재는 대규모 트래픽 처리와 시스템 안정성 향상에 집중하고 있습니다. 매주 진행하는 스터디와 함께, 동시성 제어에 대한 심도 있는 학습을 진행하고 있습니다.</p>
-            
-            <p><strong>셋째</strong>, "문제 해결과 개선에 대한 끊임없는 고민"입니다. 모든 프로젝트에서 단순히 기능 구현에 그치지 않고, 시스템의 안정성과 확장성을 고려한 설계를 지향합니다. 현재는 대용량 데이터 처리와 트랜잭션 관리에 대한 이해를 높이는 데 집중하고 있습니다.</p>
-            
-            <p>새로운 도전을 두려워하지 않고, 팀과 함께 성장하며, 사용자에게 진정한 가치를 전달하는 서비스를 만들어가는 것이 제가 지향하는 개발자의 모습입니다.</p>
-            
-            <p>제가 참여한 서비스가 많은 사람들의 불편함을 해소하고, 그들의 삶에 긍정적인 변화를 가져다주는 것이 제 꿈입니다. 이를 위해 끊임없이 학습하고 성장하며, 더 나은 개발자가 되기 위해 노력하고 있습니다.</p>
+            <div class="about-content">
+                <p>안녕하세요, 변화의 중심에 있고 싶은 백엔드 개발자 김현종입니다. 저는 기술을 통해 사람들의 일상을 더 편리하게 만드는 것을 목표로 합니다.</p>
+                <p>객체지향 설계에 대해 깊은 관심을 가지고 있으며, 이를 바탕으로 효율적이고 확장 가능한 서버 시스템을 구축하는 데 주력하고 있습니다. 새로운 기술을 학습하고 적용하는 것을 즐기며, 특히 대규모 데이터 처리 및 동시성에 관심이 많습니다.</p>
+                <p>팀과의 협업을 통해 더 나은 솔루션을 만들어내는 과정에서 큰 보람을 느낍니다. 효과적인 의사소통과 지식 공유를 통해 팀 전체의 성장에 기여하고자 노력합니다.</p>
+                <p>저는 다음과 같은 가치를 중요시합니다:</p>
+                <div class="values">
+                    <div class="value-item">
+                        <strong>첫째</strong>, "효과적인 의사소통"과 "균형 잡힌 팀워크"입니다. 우아한테크캠프에서 진행한 `축제의 민족` 프로젝트에서는 제한된 리소스 환경에서의 대규모 트래픽 처리라는 도전적인 과제를 맡았습니다. 이 과정에서 단순히 기술적 해결책을 제시하는 것을 넘어, 팀원들과 함께 시스템의 한계점을 분석하고 개선 방향을 도출했습니다. 특히 결제 시스템 설계 시에는 팀원들과의 적극적인 토론을 통해 비동기 처리 방식을 채택했고, 이는 시스템 성능 향상으로 이어졌습니다.
+                    </div>
+                    <div class="value-item">
+                        <strong>둘째</strong>, "지속적인 학습과 기술적 도전"입니다. 현재는 대규모 트래픽 처리와 시스템 안정성 향상에 집중하고 있습니다. 매주 진행하는 스터디와 함께, 동시성 제어에 대한 심도 있는 학습을 진행하고 있습니다.
+                    </div>
+                    <div class="value-item">
+                        <strong>셋째</strong>, "문제 해결과 개선에 대한 끊임없는 고민"입니다. 모든 프로젝트에서 단순히 기능 구현에 그치지 않고, 시스템의 안정성과 확장성을 고려한 설계를 지향합니다. 현재는 대용량 데이터 처리와 트랜잭션 관리에 대한 이해를 높이는 데 집중하고 있습니다.
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
+
+        <!-- 연락처 섹션 -->
+        <section id="contact" class="section">
             <h2>연락처</h2>
             <div class="contact-info">
-                <a href="tel:010-3750-9378"><i class="fas fa-phone"></i> 010-3750-9378</a>
-                <a href="mailto:starringbell@gmail.com"><i class="fas fa-envelope"></i> starringbell@gmail.com</a>
-                <a href="https://github.com/bellringstar" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://bellringstar.tistory.com" target="_blank"><i class="fas fa-blog"></i> Blog</a>
+                <a href="tel:010-3750-9378" class="contact-item">
+                    <i class="fas fa-phone"></i> 010-3750-9378
+                </a>
+                <a href="mailto:starringbell@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> starringbell@gmail.com
+                </a>
+                <a href="https://github.com/bellringstar" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://bellringstar.tistory.com" target="_blank" class="contact-item">
+                    <i class="fas fa-blog"></i> Blog
+                </a>
             </div>
         </section>
 
-        <section id="education">
+        <!-- 교육 섹션 -->
+        <section id="education" class="section education">
             <h2>교육</h2>
             <ul>
-                <li>우아한테크캠프 7기: 2024.06 ~ 2024.08</li>
-                <li>삼성청년SW아카데미(SSAFY): 2023.01 ~ 2023.12</li>
-                <li>전남대학교 전기공학과: 2019.03 ~ 2023.02</li>
+                <li>
+                    <div class="education-item">
+                        <h3>우아한테크캠프 7기</h3>
+                        <p class="period">2024.06 ~ 2024.08</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <h3>삼성청년SW아카데미(SSAFY)</h3>
+                        <p class="period">2023.01 ~ 2023.12</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="education-item">
+                        <h3>전남대학교 전기공학과</h3>
+                        <p class="period">2019.03 ~ 2023.02</p>
+                    </div>
+                </li>
             </ul>
         </section>
-        <section id="skills">
+
+        <!-- 기술 스택 섹션 -->
+        <section id="skills" class="section">
             <h2>기술 스택</h2>
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <div class="skills">
-                    <span class="skill">JAVA</span>
-                    <span class="skill">Spring Boot</span>
-                    <span class="skill">Spring Data JPA</span>
-                    <span class="skill">QueryDSL</span>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skills">
+                        <span class="skill">JAVA</span>
+                        <span class="skill">Spring Boot</span>
+                        <span class="skill">Spring Data JPA</span>
+                        <span class="skill">QueryDSL</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>Database</h3>
-                <div class="skills">
-                    <span class="skill">MySQL</span>
-                    <span class="skill">MongoDB</span>
-                    <span class="skill">Redis</span>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skills">
+                        <span class="skill">MySQL</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Redis</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>DevOps & Tools</h3>
-                <div class="skills">
-                    <span class="skill">Docker</span>
-                    <span class="skill">AWS</span>
-                    <span class="skill">Kafka</span>
+                <div class="skill-category">
+                    <h3>DevOps & Tools</h3>
+                    <div class="skills">
+                        <span class="skill">Docker</span>
+                        <span class="skill">AWS</span>
+                    </div>
                 </div>
             </div>
         </section>
-        </div>
 
-        <section id="projects">
+        <!-- 프로젝트 섹션 -->
+        <section id="projects" class="section">
             <h2>프로젝트</h2>
-
             <div class="project">
                 <div class="project-header">
                     <h3>축제의 민족 - 페스티벌 티켓 예매 서비스</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/woowa-techcamp-2024/Team2-Dari" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
+                    <p>기간: 2024.08 ~ 2024.08 (3주)</p>
                 </div>
-                <p>기간: 2024-08 ~ 2024-08 (3주)</p>
-                <div class="project-details">
-                    <div class="project-info">
-                        <div class="project-description">
-                            <h4>프로젝트 설명</h4>
-                            <p>제한된 리소스 환경(AWS t3.small EC2 인스턴스 2대, RDS, Redis)에서 안정적인 운영을 목표로 하는 페스티벌 티켓 예매 서비스입니다. 순간적인 대규모 트래픽 상황에서도 안정적으로 동작하도록 설계되었으며, 효율적인 대기열 관리와 비동기 처리를 통해 사용자 경험을 최적화했습니다.</p>
-                        </div>
-                        <div class="project-responsibilities">
-                            <h4>담당 업무</h4>
-                            <ul>
-                                <li>결제 비동기 처리 시스템 구현
-                                    <ul>
-                                        <li>CompletableFuture와 커스텀 스레드 풀을 활용한 비동기 결제 처리 구조 설계</li>
-                                        <li>Caffeine 캐시를 도입하여 결제 상태 관리 최적화</li>
-                                        <li>결제 성공 및 실패에 따른 후속 처리 작업 자동화</li>
-                                    </ul>
-                                </li>
-                                <li>MySQL 배치 처리 최적화
-                                    <ul>
-                                        <li>ConcurrentLinkedQueue를 사용한 인메모리 큐 시스템 구축</li>
-                                        <li>JdbcTemplate을 활용한 배치 INSERT 쿼리 최적화</li>
-                                        <li>대량의 주문 데이터 효율적 처리 구현</li>
-                                    </ul>
-                                </li>
-                                <li>장애 대응 메커니즘 구현
-                                    <ul>
-                                        <li>결제 실패 및 시스템 장애 시 데이터 정합성 보장을 위한 보상 트랜잭션 처리 로직 개발</li>
-                                    </ul>
-                                </li>
-                                <li>프론트엔드 화면 구성
-                                    <ul>
-                                        <li>React를 활용한 사용자 인터페이스 개발</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
 
-                        <div class="project-tech">
-                            <h4>사용 기술</h4>
-                            <ul>
-                                <li>Java 17, Spring Boot 3.3.2, MySQL 8.0.35, Redis</li>
-                                <li>React, K6, Prometheus, Grafana</li>
-                                <li>AWS Application LoadBalancer, AWS EC2, AWS RDS</li>
-                            </ul>
-                        </div>
+                <div class="project-overview">
+                    <div class="project-description">
+                        <h4>프로젝트 설명</h4>
+                        <p>제한된 리소스 환경(AWS t3.small EC2 인스턴스 2대, RDS, Redis)에서 안정적인 운영을 목표로 하는 페스티벌 티켓 예매 서비스입니다. 순간적인 대규모 트래픽 상황에서도 안정적으로 동작하도록 설계되었으며, 효율적인 대기열 관리와 비동기 처리를 통해 사용자 경험을 최적화했습니다.</p>
                     </div>
-
-                    <div class="project-images">
+                    <div class="project-image">
                         <img src="./images/team2dari-ARC.png" alt="축제의 민족 프로젝트 아키텍처">
-                        <img src="./images/team2dari4.gif" alt="축제의 민족 프로젝트 이미지 4">
                     </div>
                 </div>
-            </div>
-            
-            <div class="project">
-                <div class="project-header">
-                    <h3>Keepham - IoT기반 배달함 공유 서비스</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/bellringstar/keepham" target="_blank"><i class="fab fa-github"></i></a>
+
+                <div class="project-tech">
+                    <h4>사용 기술</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">Java 17</span>
+                        <span class="tech-item">Spring Boot 3.3.2</span>
+                        <span class="tech-item">MySQL 8.0.35</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">K6</span>
+                        <span class="tech-item">Prometheus</span>
+                        <span class="tech-item">Grafana</span>
+                        <span class="tech-item">AWS</span>
                     </div>
                 </div>
-                <p>기간: 2023-07-04 ~ 2023-08-18</p>
-                <div class="project-details">
-                    <div class="project-info">
-                        <div class="project-description">
-                            <h4>프로젝트 설명</h4>
-                            <p>공유오피스 등을 대상으로 해 서로 함께 주문하여 배달비를 아낄 수 있는 서비스입니다. 통신이 가능한 IoT 기기인 box 및 주문할 가게와 연동된 채팅방을 생성해 메뉴를 선택하고 주문 후 box에서 배달된 음식을 찾아갑니다.</p>
-                        </div>
-                        <div class="project-responsibilities">
-                            <h4>담당 업무</h4>
+                <div class="project-responsibilities">
+                    <h4>담당 업무</h4>
+                    <ul>
+                        <li>결제 비동기 처리 시스템 구현
                             <ul>
-                                <li>채팅방 서버 구현
+                                <li>배경
                                     <ul>
-                                        <li>Spring WebSocket을 사용하여 실시간 양방향 통신 구현</li>
-                                        <li>채팅방 생성, 참여, 나가기 등의 기능을 RESTful API로 설계 및 구현</li>
+                                        <li>동시 결제 요청 시 DB 커넥션 풀 고갈로 인한 시스템 불안정 발생</li>
+                                        <li>제한된 리소스(t3.small) 환경에서의 처리량 한계</li>
+                                        <li>결제 처리 지연으로 인한 사용자 경험 저하</li>
                                     </ul>
                                 </li>
-                                <li>Stomp over WebSocket을 이용한 실시간 채팅 시스템 개발
+                                <li>고민 과정
                                     <ul>
-                                        <li>STOMP 프로토콜을 사용하여 효율적인 메시지 라우팅 구현</li>
-                                        <li>사용자 인증 및 권한 관리를 위한 인터셉터 구현</li>
+                                        <li>동기식 처리 방식 분석
+                                            <ul>
+                                                <li>DB 커넥션 풀 사이즈 증가: 리소스 제약으로 인해 현실적이지 않음</li>
+                                                <li>DB 샤딩: 시스템 복잡도 증가 및 운영 부담 증가</li>
+                                            </ul>
+                                        </li>
+                                        <li>메시지 큐 도입 검토
+                                            <ul>
+                                                <li>Kafka 도입: 추가 인프라 비용 및 운영 복잡도 증가</li>
+                                                <li>Redis Pub/Sub: 메시지 유실 가능성과 영속성 부재, 레디스 부담 증가</li>
+                                            </ul>
+                                        </li>
+                                        <li>비동기 처리 방식 선택 이유
+                                            <ul>
+                                                <li>추가 인프라 없이 구현 가능한 경량화된 솔루션</li>
+                                                <li>Java의 비동기 프로그래밍 지원 활용 가능</li>
+                                                <li>기존 시스템 아키텍처 유지하며 성능 개선 가능</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li>Kafka를 활용한 메시징 시스템 구축
+                                <li>구현 내용
                                     <ul>
-                                        <li>비동기 처리를 통한 시스템 성능 향상 및 확장성 확보</li>
-                                        <li>주문 처리, 알림 발송 등의 이벤트를 Kafka 토픽으로 관리</li>
-                                    </ul>
-                                </li>
-                                <li>MongoDB를 이용한 채팅 내역 관리 시스템 개발
-                                    <ul>
-                                        <li>비정형 데이터인 채팅 메시지를 효율적으로 저장 및 조회</li>
-                                        <li>인덱싱을 통한 빠른 검색 기능 구현</li>
+                                        <li>CompletableFuture 기반 비동기 처리
+                                            <ul>
+                                                <li>커스텀 스레드 풀 구성: CPU 코어 수 기반 optimal 스레드 수 설정</li>
+                                                <li>비동기 작업 체이닝으로 결제-주문-알림 플로우 구성</li>
+                                                <li>예외 처리를 위한 exceptionally 핸들러 구현</li>
+                                            </ul>
+                                        </li>
+                                        <li>결제 상태 관리
+                                            <ul>
+                                                <li>Caffeine 캐시 도입으로 DB 조회 부하 감소</li>
+                                                <li>캐시 정책: 5분 TTL, 최대 10000개 엔트리</li>
+                                                <li>캐시 무효화 전략: Write-Through 방식 적용</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="project-tech">
-                            <h4>사용 기술</h4>
+                        </li>
+                        <li>MySQL 배치 처리 최적화
                             <ul>
-                                <li>Java 17, Spring Boot 3.0.8, Spring Data JPA, Spring Security, JWT</li>
-                                <li>Redis, Kafka, MongoDB, MySQL</li>
-                                <li>Docker, AWS Lightsail, Jenkins, Nginx</li>
+                                <li>배경
+                                    <ul>
+                                        <li>개별 결제건마다 DB 연산 수행으로 인한 커넥션 부족 현상 발생</li>
+                                        <li>대량의 주문 데이터 처리 시 성능 저하 문제</li>
+                                        <li>티켓팅 오픈 직후 급증하는 트랜잭션 처리 필요</li>
+                                    </ul>
+                                </li>
+                                <li>고민 과정
+                                    <ul>
+                                        <li>개별 처리 방식 분석
+                                            <ul>
+                                                <li>커넥션 풀 설정 조정: 서버 리소스 한계로 근본적 해결 어려움</li>
+                                                <li>트랜잭션 타임아웃 조정: 사용자 경험 저하 우려</li>
+                                            </ul>
+                                        </li>
+                                        <li>데이터 저장소 변경 검토
+                                            <ul>
+                                                <li>Redis 활용: 속도는 개선되나 데이터 정합성 이슈 우려</li>
+                                                <li>MongoDB 도입: 스키마 변경 비용과 학습 곡선 고려</li>
+                                            </ul>
+                                        </li>
+                                        <li>배치 처리 방식 선택 이유
+                                            <ul>
+                                                <li>단일 트랜잭션으로 다수의 데이터 처리 가능</li>
+                                                <li>DB 커넥션 사용 효율성 극대화</li>
+                                                <li>기존 RDBMS 활용으로 안정성 확보</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>구현 내용
+                                    <ul>
+                                        <li>인메모리 큐 시스템 구축
+                                            <ul>
+                                                <li>ConcurrentLinkedQueue 활용한 스레드 세이프한 데이터 적재</li>
+                                                <li>큐 사이즈 모니터링 및 임계치 기반 배치 처리 트리거 구현</li>
+                                                <li>주기적 배치 처리를 위한 스케줄러 구현</li>
+                                            </ul>
+                                        </li>
+                                        <li>배치 INSERT 최적화
+                                            <ul>
+                                                <li>JdbcTemplate batchUpdate 활용한 벌크 인서트 구현</li>
+                                                <li>배치 사이즈 실험을 통한 최적 처리량 도출 (500건 단위)</li>
+                                                <li>rewriteBatchedStatements=true 설정으로 MySQL 배치 성능 최적화</li>
+                                            </ul>
+                                        </li>
+                                        <li>장애 대응 로직
+                                            <ul>
+                                                <li>배치 실패 시 개별 건 재처리 메커니즘 구현</li>
+                                                <li>처리 실패 데이터 로깅 및 복구 프로세스 수립</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>결과 및 개선 고려사항
+                                    <ul>
+                                        <li>성과
+                                            <ul>
+                                                <li>DB 커넥션 사용량 70% 감소</li>
+                                                <li>데이터 처리 시간 65% 단축</li>
+                                                <li>시스템 안정성 향상</li>
+                                            </ul>
+                                        </li>
+                                        <li>향후 개선 방향
+                                            <ul>
+                                                <li>현재 인메모리 큐 사용으로 인한 데이터 유실 가능성 존재</li>
+                                                <li>Kafka 도입을 통한 메시지 영속성 확보 방안 검토</li>
+                                                <li>배치 사이즈 동적 조정 메커니즘 도입 고려</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="project-images">
-                        <img src="./images/keepham-ARC.jpg" alt="Keepham 프로젝트 이미지 1">
-                        <img src="./images/keepham1.jpg" alt="Keepham 프로젝트 이미지 2">
-                        <img src="./images/keepham2.jpg" alt="Keepham 프로젝트 이미지 3">
-                        <img src="./images/keepham3.jpg" alt="Keepham 프로젝트 이미지 4">
-                    </div>
+                        </li>
+                        <li>장애 대응 메커니즘 구현
+                            <ul>
+                                <li>배경
+                                    <ul>
+                                        <li>결제 실패나 시스템 장애 시 데이터 정합성 보장 필요</li>
+                                        <li>배치 처리 실패 시 데이터 복구 방안 부재</li>
+                                        <li>장애 상황에서의 사용자 경험 개선 필요</li>
+                                    </ul>
+                                </li>
+                                <li>고민 과정
+                                    <ul>
+                                        <li>분산 트랜잭션 패턴 검토
+                                            <ul>
+                                                <li>2PC(Two-Phase Commit): 성능 오버헤드와 복잡도 증가</li>
+                                                <li>SAGA 패턴: 구현 복잡도와 운영 부담 고려</li>
+                                                <li>보상 트랜잭션: 구현 용이성과 안정성 확보 가능</li>
+                                            </ul>
+                                        </li>
+                                        <li>장애 복구 전략
+                                            <ul>
+                                                <li>자동 롤백: 예측하지 못한 상황 발생 가능성</li>
+                                                <li>수동 개입: 운영자의 즉각적인 대응 어려움</li>
+                                                <li>하이브리드 방식: 자동화된 복구와 수동 개입 결합</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>구현 내용
+                                    <ul>
+                                        <li>보상 트랜잭션 처리
+                                            <ul>
+                                                <li>결제-주문-재고 상태 동기화를 위한 보상 로직 구현</li>
+                                                <li>실패 이벤트 로깅 및 모니터링 시스템 연동</li>
+                                                <li>운영자 알림 시스템 구축</li>
+                                            </ul>
+                                        </li>
+                                        <li>배치 작업 재처리
+                                            <ul>
+                                                <li>재처리 횟수 제한 및 점진적 백오프 전략 적용</li>
+                                                <li>수동 개입이 필요한 케이스 분류 및 대응 프로세스 수립</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>프론트엔드 화면 구성
+                            <ul>
+                                <li>React를 활용한 사용자 인터페이스 개발</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-    </section>
+        </section>
     </div>
 </body>
 </html>

@@ -1,13 +1,18 @@
+/* Variables */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  --background-color: #f4f4f4;
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #e74c3c;
+  --background-color: #ffffff;
   --text-color: #333;
-  --skill-background: #3498db;
+  --border-color: #e0e0e0;
+  --section-spacing: 2rem;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Base styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -16,154 +21,428 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 2rem;
 }
 
-header {
+/* Header Styles */
+.header-content {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  background: linear-gradient(135deg, #2563eb, #3b82f6, #60a5fa);  /* 더 밝고 생동감 있는 그라데이션 */
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);  /* 부드러운 그림자 효과 */
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;  /* 글자 간격 살짝 조정 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 텍스트에 미세한 그림자 */
+}
+
+.header-text h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.95;  /* 투명도 살짝 조정 */
+  letter-spacing: 0.01em;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: var(--section-spacing);
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.section h2 {
+  color: var(--secondary-color);
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: 1.4rem;
+}
+
+/* About Section */
+.about {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about p {
+  margin-bottom: 1rem;
+}
+
+.values .value-item {
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-info {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.contact-info a:hover {
   background-color: var(--primary-color);
   color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-bottom: 2rem;
 }
 
-h1 {
+/* Education Section */
+.education ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 2.5rem;
 }
 
-h2 {
+.education li {
+  padding: 0.6rem;
+  margin-bottom: 0.4rem;
+  border-left: 3px solid var(--primary-color);
+  background-color: #f8f9fa;
+  border-radius: 0 4px 4px 0;
+}
+
+.education-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.education-item .period {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.skill-category {
+  background: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.skill-category h3 {
   color: var(--secondary-color);
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-#contact p {
-  margin: 0.5rem 0;
+  margin: 0 0 0.8rem;
+  font-size: 1.1rem;
 }
 
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-}
-
-.project {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.project h3 {
-  color: var(--primary-color);
-  margin-top: 0;
-}
-
-.project p {
-  margin: 0.5rem 0;
-}
-
-.project-description, .project-responsibilities, .project-tech {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.project-info h4 {
-  color: var(--secondary-color);
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.project-info ul {
-  padding-left: 20px;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
+  gap: 0.6rem;
 }
 
 .skill {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background: white;
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
   font-size: 0.9rem;
-  display: inline-block;
-  margin: 0.2rem;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
 }
 
-.project-images {
-  display: flex;
-  flex-direction: column;
+.skill:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Project Section */
+.project {
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: white;
+}
+
+.project-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 1.5rem;
+  color: white;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.project-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* Project Overview */
+.project-overview {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 1rem;
+  padding: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.project-images img {
+.project-description {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.project-description h4 {
+  margin: 0 0 0.8rem;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.project-description p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.project-image {
+  align-self: center;
+}
+
+.project-image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: var(--card-shadow);
 }
 
-ul {
-  padding-left: 20px;
+/* Project Tech Stack */
+.project-tech {
+  padding: 1.2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
 }
 
-a {
+.project-tech h4 {
+  margin: 0 0 0.8rem;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-item {
+  background: white;
   color: var(--primary-color);
-  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.tech-item:hover {
+  background: var(--primary-color);
+  color: white;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  
-  header {
-    padding: 0.5rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
+/* Project Responsibilities */
+.project-responsibilities {
+  padding: 1.2rem;
 }
 
-/* 프로젝트별 페이지 나누기 및 인쇄 설정 */
+.project-responsibilities h4 {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+}
+
+.project-responsibilities h5 {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.project-responsibilities ul {
+  padding-left: 1rem;
+  margin: 0;
+  margin-bottom: 0.4rem;
+}
+
+.project-responsibilities li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.project-responsibilities .responsibility-content {
+  margin-left: 0.5rem;
+}
+
+.project-responsibilities > ul > li {
+  list-style-type: none;
+  position: relative;
+}
+
+.project-responsibilities > ul > li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+.project-responsibilities ul ul {
+  margin: 0.2rem 0 0.2rem 0.5rem;
+}
+
+.project-responsibilities ul ul li {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+
+.project-responsibilities ul ul li::before {
+  content: "-";
+  color: var(--text-color);
+  position: absolute;
+  left: -0.8rem;
+}
+
+/* Print styles */
 @media print {
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  @page {
+    margin: 1.5cm;
+    size: A4;
   }
-  
+
+  body {
+    background: white;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  /* 첫 페이지: About Me */
+  .header-content {
+    break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  #about {
+    break-inside: avoid;
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+
+  /* 두 번째 페이지: 연락처, 교육, 기술스택 */
+  #contact {
+    break-before: page;
+    break-after: avoid;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  #education,
+  #skills {
+    break-inside: avoid;
+    break-before: auto;
+    break-after: avoid;
+    page-break-before: avoid;
+    page-break-after: avoid;
+    margin-top: 1rem;
+  }
+
+  /* 프로젝트 섹션 */
+  #projects {
+    break-before: page;
+  }
+
   .project {
+    break-inside: avoid;
     page-break-before: always;
   }
-  
+
   .project:first-of-type {
     page-break-before: avoid;
   }
-  
-  .project-images img {
-    max-height: 300px;
-    width: auto;
+
+  .project-header,
+  .project-overview,
+  .project-tech {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+
+  .project-responsibilities {
+    break-before: page;
+    break-inside: avoid;
+  }
+
+  .section {
+    margin-bottom: 1rem;
+  }
+
+  * {
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-text h2 {
+    font-size: 1.1rem;
   }
 }
