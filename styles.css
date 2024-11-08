@@ -100,8 +100,6 @@ section {
 }
 
 .skill {
-  background-color: var(--skill-background);
-  color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
