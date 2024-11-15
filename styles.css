@@ -31,25 +31,25 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   padding: 1.5rem 0;
-  background: linear-gradient(135deg, #2563eb, #3b82f6, #60a5fa);  /* 더 밝고 생동감 있는 그라데이션 */
+  background: linear-gradient(135deg, #2563eb, #3b82f6, #60a5fa);
   color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);  /* 부드러운 그림자 효과 */
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
 }
 
 .header-text h1 {
   font-size: 2rem;
   margin: 0 0 0.2rem 0;
   font-weight: 700;
-  letter-spacing: 0.02em;  /* 글자 간격 살짝 조정 */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 텍스트에 미세한 그림자 */
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-text h2 {
   font-size: 1.2rem;
   margin: 0;
   font-weight: 400;
-  opacity: 0.95;  /* 투명도 살짝 조정 */
+  opacity: 0.95;
   letter-spacing: 0.01em;
 }
 
@@ -229,23 +229,9 @@ body {
   font-size: 1.1rem;
 }
 
-.project-header h3 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.project-header p {
-  margin: 0.5rem 0 0;
-  opacity: 0.9;
-  font-size: 0.9rem;
-}
-
 /* Project Overview */
 .project-overview {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-  padding: 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -254,42 +240,20 @@ body {
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--border-color);
-}
-
-.project-description h4 {
-  margin: 0 0 0.8rem;
-  color: var(--secondary-color);
-  font-size: 1.1rem;
-}
-
-.project-description p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
-}
-
-.project-image {
-  align-self: center;
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: var(--card-shadow);
+  margin-bottom: 0;
 }
 
 /* Project Tech Stack */
 .project-tech {
-  padding: 1.2rem;
-  background-color: #f8f9fa;
+  padding: 0.8rem 1.2rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-.project-tech h4 {
-  margin: 0 0 0.8rem;
-  color: var(--secondary-color);
-  font-size: 1.1rem;
+.tech-content {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .tech-list {
@@ -315,21 +279,26 @@ body {
 
 /* Project Responsibilities */
 .project-responsibilities {
-  padding: 1.2rem;
+  padding: 0.8rem 1.2rem;
 }
 
+.project-responsibilities-content {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* Section Headers */
+.project-description h4,
+.project-tech h4,
 .project-responsibilities h4 {
   color: var(--secondary-color);
   font-size: 1.1rem;
-  margin: 0 0 0.8rem;
+  margin: 0 0 1rem;
 }
 
-.project-responsibilities h5 {
-  color: var(--secondary-color);
-  font-size: 0.95rem;
-  margin: 0.8rem 0 0.4rem;
-}
-
+/* Project Responsibilities List Styles */
 .project-responsibilities ul {
   padding-left: 1rem;
   margin: 0;
@@ -340,10 +309,6 @@ body {
   margin-bottom: 0.6rem;
   line-height: 1.5;
   font-size: 0.9rem;
-}
-
-.project-responsibilities .responsibility-content {
-  margin-left: 0.5rem;
 }
 
 .project-responsibilities > ul > li {
@@ -379,8 +344,8 @@ body {
 /* Print styles */
 @media print {
   @page {
-    margin: 1.5cm;
     size: A4;
+    margin: 1.5cm;
   }
 
   body {
@@ -428,29 +393,23 @@ body {
 
   .project {
     break-inside: avoid;
+    break-before: always;
     page-break-before: always;
-  }
-  .project-links a {
-    text-decoration: none;
-    border: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .project:first-of-type {
+    break-before: avoid;
     page-break-before: avoid;
   }
 
   .project-header,
   .project-overview,
-  .project-tech {
+  .project-tech,
+  .project-responsibilities {
     break-inside: avoid;
     page-break-inside: avoid;
-    page-break-before: avoid;
+    break-before: avoid;
     page-break-after: avoid;
-  }
-
-  .project-responsibilities {
-    break-before: page;
-    break-inside: avoid;
   }
 
   .section {
