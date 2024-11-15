@@ -345,7 +345,7 @@ body {
 @media print {
   @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 0.5cm;
   }
 
   body {
@@ -393,8 +393,9 @@ body {
 
   .project {
     break-inside: avoid;
-    break-before: always;
+    break-before: page;
     page-break-before: always;
+
   }
 
   .project:first-of-type {
@@ -413,7 +414,7 @@ body {
   }
 
   .section {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   * {
